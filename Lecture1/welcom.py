@@ -16,14 +16,22 @@ def diff_num(number):
         for j in number:
             if j == digit:
                 print(j)
-                exit()
+                return
+"""
+This function accept a filename from the user 
+and print the extension of file.
+"""
+def extns_file(filename):
+    extns = filename.split(".")
+    print("The extension of the file is : " + repr(extns[-1]))
 
-        
 
 def main():
     number = input("Pleae enter number: ")
     print("check if there is a diffrent number...")
     diff_num(number)
+    filename = input("Please Enter a filename: ")
+    extns_file(filename)
 
 if __name__ == "__main__":
     main()
